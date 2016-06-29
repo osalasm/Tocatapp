@@ -19,26 +19,17 @@ public class LoginActivity extends AppCompatActivity {
         final EditText editTextMail = (EditText) findViewById(R.id.mailEditText);
         final EditText editTextPassword = (EditText) findViewById(R.id.passwordEditText);
         final Button buttonLogin = (Button) findViewById(R.id.loginButton);
-        final Button buttonRegister = (Button) findViewById(R.id.registerButton);
-
-        buttonRegister.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-                LoginActivity.this.startActivity(registerIntent);
-            }
-        });
 
         buttonLogin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void OnClick(View v) {
-                String userMail = "Augusto";
-                String userPassword = "1234";
-                final String editTextMail.getText().toString();
-                final String editTextPassword.getText().toString();
+                final String userEmail = editTextMail.getText().toString();
+                final String userPassword = editTextPassword.getText().toString();
 
-                if(editTextMail.equals(userMail) & userPassword.equals(userPassword)) {
-
+                if(UserService.isValid(userEmail, userPassword)) {
+                    // Dejar en blanco, yo sigo desde aca
+                } else {
+                    DialogHelper.showSimpleOkDialog(this, "Usuario/Contraseña incorrecta", "Su nombre de usuario o contraseña es incorrecto"); 
                 }
 
             }
