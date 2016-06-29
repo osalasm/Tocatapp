@@ -11,7 +11,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido, ingresa tu mail y contraseña"/>
+        android:text="Bienvenido, completa con tus datos personales"/>
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/mailEditText"
         android:layout_width="250dp"
@@ -26,16 +32,16 @@
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:textSize="20dp"/>
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Let's Rock!"/>
+        android:hint="Edad"
+        android:textSize="20dp"/>
     <Button
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Registrarse"/>
+        android:text="Let's Rock!"/>
 </LinearLayout>
