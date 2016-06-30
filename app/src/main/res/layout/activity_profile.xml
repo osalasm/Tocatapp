@@ -4,10 +4,16 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="50dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfil de usuario"
+        android:layout_gravity="center"/>
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:src="@drawable/sexyMan"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,20 +24,28 @@
         android:layout_height="wrap_content"
         android:text="Intrumento: Bajo / Estilo: Funk"
         android:layout_gravity="center"/>
-    <Button
-        android:id="@+id/loginButton"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Escribrir"/>
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/"
-        android:textColor="@color/"
-        android:text="Invitar"/>
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Escribrir"/>
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="@android:color/white"
+            android:text="Invitar"/>
+    </LinearLayout>
+
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="wrap_content"
